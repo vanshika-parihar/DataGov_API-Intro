@@ -1,0 +1,13 @@
+﻿@model DataGov_API_Intro.Models.Results
+
+@{
+  ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach (DataGov_API_Intro.Models.Result result in Model.results)
+{
+  @( result.data_year+ " " + result.covered_agency_count + " " + result.total_population)
+  <br />
+}
