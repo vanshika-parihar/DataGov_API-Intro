@@ -21,16 +21,16 @@ namespace DataGov_API_Intro.Controllers
             httpClient.DefaultRequestHeaders.Accept.Add(
                 new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
-            string NATIONAL_PARK_API_PATH = BASE_URL + "api/participation/national?limit=20";
+            string FBI_DATA_API_PATH = BASE_URL + "api/participation/national?limit=20";
             string resultsData = "";
 
             Results results = null;
 
-            httpClient.BaseAddress = new Uri(NATIONAL_PARK_API_PATH);
+            httpClient.BaseAddress = new Uri(FBI_DATA_API_PATH);
 
             try
             {
-                HttpResponseMessage response = httpClient.GetAsync(NATIONAL_PARK_API_PATH).GetAwaiter().GetResult();
+                HttpResponseMessage response = httpClient.GetAsync(FBI_DATA_API_PATH).GetAwaiter().GetResult();
 
                 if (response.IsSuccessStatusCode)
                 {

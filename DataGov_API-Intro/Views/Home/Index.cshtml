@@ -7,19 +7,21 @@
     <link rel="stylesheet" href="/table.css" type="text/css" />
 </head>
 <body>
-    <table class="table">
-        <tr>
-            <th>Year </th>
-            <th>Agency Count </th>
-            <th>Total Population </th>
-        </tr>
-        @foreach (DataGov_API_Intro.Models.Result result in Model.results)
-        {
+    <div style="width:50%; height:700px; overflow:auto;">
+        <table class="table">
             <tr>
-                <td>@result.data_year</td>
-                <td>@result.covered_agency_count</td>
-                <td>@result.total_population</td>
+                <th>Year </th>
+                <th>Agency Count </th>
+                <th>Total Population </th>
             </tr>
-        }
-    </table>
+            @foreach (DataGov_API_Intro.Models.Result result in Model.results)
+            {
+                <tr>
+                    <td>@result.data_year</td>
+                    <td>@result.covered_agency_count</td>
+                    <td>@result.total_population</td>
+                </tr>
+            }
+        </table>
+    </div>
 </body>
