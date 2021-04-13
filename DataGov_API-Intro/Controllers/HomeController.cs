@@ -10,10 +10,9 @@ namespace DataGov_API_Intro.Controllers
     {
         HttpClient httpClient;
 
-        static string BASE_URL = "https://api.usa.gov/crime/fbi/sapi/"; //"https://developer.nps.gov/api/v1/";
-        static string API_KEY = "g1mjvzQVDzMmHo0UQgfjLMgV4pzyazleokQOM5XS"; //Add your API key here inside ""
+        static string BASE_URL = "https://api.usa.gov/crime/fbi/sapi/"; 
+        static string API_KEY = "g1mjvzQVDzMmHo0UQgfjLMgV4pzyazleokQOM5XS"; 
 
-        // fbi api//  https://api.usa.gov/crime/fbi/sapi/api/participation/national
         public IActionResult Index()
         {
             httpClient = new HttpClient();
